@@ -1,0 +1,19 @@
+{
+    "API_keys": {
+      "news" : "c72dd263f7cf4de9bff7b301fddec1d3",
+      "weather" : "ef37c4c852765aa7bfa72aba5354a8b7"
+    },
+    "Location": {
+      "my-city" : "Exeter",
+      "country" : "gb"
+    },
+    "News-sources": {
+      "my-sources": ["BBC News"]
+    },
+    "Notif_period": {
+      "time": "3600"
+    },
+    "threshold": {
+      "number": "100"
+    }
+}

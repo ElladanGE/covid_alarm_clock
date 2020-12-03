@@ -1,0 +1,13 @@
+INFO:root:Notifications were updated
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [03/Dec/2020 15:50:11] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:root:Notifications were updated
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [03/Dec/2020 16:03:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:root:An alarm was created for 16:04 on the 03-12
+INFO:werkzeug:127.0.0.1 - - [03/Dec/2020 16:04:04] "[37mGET /index?alarm=2020-12-03T16%3A04&two=Hello&news=news&weather=weather HTTP/1.1[0m" 200 -
+INFO:root:Notifications were updated
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [03/Dec/2020 16:06:18] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:root:An alarm was created for 16:06 on the 03-12
+INFO:werkzeug:127.0.0.1 - - [03/Dec/2020 16:06:28] "[37mGET /index?alarm=2020-12-03T16%3A06&two=Hello&news=news&weather=weather HTTP/1.1[0m" 200 -
