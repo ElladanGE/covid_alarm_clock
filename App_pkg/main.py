@@ -1,4 +1,4 @@
-"""Main module for covid_alarm_clock-19 alarm clock. This module runs the alarm clock."""
+"""Main module for covid-19 alarm clock. This module runs the alarm clock."""
 
 from flask import *
 from App_pkg.time_conversion import *
@@ -39,7 +39,6 @@ covid_struct = {
         "cumCasesByPublishDate": "cumCasesByPublishDate",
         "newDeathsByDeathDate": "newDeathsByDeathDate",
         "cumDeathsByDeathDate": "cumDeathsByDeathDate",
-        "cumCasesBySpecimenDateRate": "cumCasesBySpecimenDateRate"
     }
 }
 api = Cov19API(
@@ -118,7 +117,7 @@ def loc_weather() -> None:
 def local_covid_cases() -> None:
     """Uses Uk Gov. API to announce number of local covid cases
 
-        If covid_alarm_clock api response isn't 200: returns None
+        If covid api response isn't 200: returns None
     """
     engine3 = pyttsx3.init()
     response = requests.get("https://api.coronavirus.data.gov.uk/v1/data", params=api.api_params, timeout=10)
@@ -153,7 +152,7 @@ def national_covid_cases() -> str:
     national_new_cases = national_data['newCasesByPublishDate']
     local_new_cases = local_data['newCasesByPublishDate']
     date = national_data["date"]
-    return "On " + str(date) + " there are " + str(national_new_cases) + " new cases of covid_ in England  and " + \
+    return "On " + str(date) + " there are " + str(national_new_cases) + " new cases of covid in England  and " + \
            str(local_new_cases) + " in Exeter."
 
 
@@ -191,7 +190,7 @@ def period_notif(notif_list: list) -> None:
 
 
 def covid_rate(notif_list: list) -> None:
-    """Checks to see if the number of covid_alarm_clock cases has passed a certain threshold"""
+    """Checks to see if the number of covid cases has passed a certain threshold"""
     response = requests.get("https://api.coronavirus.data.gov.uk/v1/data", params=api.api_params, timeout=10)
     new_cases = api.get_json()["data"][0]['newCasesByPublishDate']
     if response.status_code != 200:
