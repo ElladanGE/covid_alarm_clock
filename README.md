@@ -11,33 +11,30 @@ This project was written in Python 3. The user will need a working Python 3 inte
 The user will also need git installed.
 
 ## Installation
+(Note: All installation commands are for windows terminals)
 
 You can dowload the package from Github using:
 ```sh
-$ git clone https://github.com/ElladanGE
-$ cd COVID_AlarmClock
+$ git clone https://github.com/ElladanGE/covid_alarm_clock.git
+$ cd covid_alarm_clock
 ```
 
-Create a new virtual environment using:
+Create and activate a new virtual environment using:
 ```sh
-python3 -m venv <DIR>
-source <DIR>/bin/activate
+py -m venv <DIR>
+venv\Scripts\activate
 ```
-And then activate it using:
+
+Next run the setup file:
 ```sh
-python3 -m venv <DIR>
-source <DIR>/bin/activate
+py setup.py install
 ```
 
 Additionnal packages required:
   - pyttsx3
   - flask
   - requests
-  - json
   - uk-covid19
-  - sched
-  - time
-  - logging
 
 If you do not have these packages pre-installed, you can download them using:
 ```sh
@@ -69,12 +66,12 @@ Inside this file you must use this structure:
     }
 }
 ```
-Once you have done this, save it in \COVID_AlarmClock\App.
+Once you have done this, save it in \covid_alarm_clock\App_pkg
 
 Voila, the program is now ready to run.
-To run the program, in \COVID_AlarmClock> simply type:
+To run the program, in \covid_alarm_clock\App_pkg simply type:
 ```sh
-python main.py
+py main.py
 ```
 
 ### Usage
@@ -91,7 +88,7 @@ On the right hand side, you will see 3 notification boxes. One for COVID update,
 
 
 ## Testing
-To run the test, in \COVID_AlarmClock directory, simply type:
+To run the test, in \covid_alarm_clock directory, simply type:
 ```sh
 $ pytest
 ```
@@ -118,6 +115,10 @@ $ pytest
     * README.md
     * setup.py
 ```
+- App_pkg contains the main.py module which contains the main functions and flask module
+- tests contains the test_main.py which contains functions which test the main module and the gb-news.json file wich is used to test some of the functions
+- templates contains template.html
+- static/Images contains the image on the alarm front page
 
 
 ## Details
@@ -134,4 +135,3 @@ This project is licensed under the MIT Licence - see the [license.md](license.md
 
 ### Acknowledgements
 I would like to thank Dr. Matt Collison and all the TA's for their help during the developpement of this project.
-
